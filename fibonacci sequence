@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int nterms,n1=0,n2=1,count=0,sum;
+    cout<<"Welcome to fibonacci sequence product! Please insert the number of terms: "<<endl;
+    cin>>nterms;
+    if(nterms<0){
+        cout<<"The number of terms you inserted is less than zero. Try again."<<endl;
+    }
+    else if(nterms == 1){
+        cout<<"The number of terms you inserted has to be greater than 1 term."<<endl;
+    }
+    else{
+        for(int i=0;i<=nterms;i++){
+            sum = n1 + n2;
+            n1 = n2;
+            n2 = sum;
+            cout<<"fibonacci sequence term "<<count++<<":"<<n1<<endl;
+        }
+    }
+return 0;
+}
+// This is same problem but adding a void function cal(); rather than preforming the problem in the main function.
+/*
+void cal(int);
+int main(){
+int nterms;
+cout<<"Welcome to fibonacci sequence product! Please insert the number of terms: "<<endl;
+cin>>nterms;
+cal(nterms);
+}
+void cal(int nterms){
+    int n1=0,n2=1,sum,count=0;
+    if(nterms<0){
+        cout<<"The number of terms you inserted is less than zero. Try again."<<endl;
+    }
+    else if(nterms==1){
+        cout<<"The number of terms you inserted has to be greater than 1 term."<<endl;
+    }
+    else{
+        for(int i=0;count<=nterms;i++){
+            sum= n1+ n2;
+            n1 = n2;
+            n2 = sum;
+            cout<<"fibonacci sequence term "<<count++<<":"<<n1<<endl;
+        }
+    }
+}
+*/
